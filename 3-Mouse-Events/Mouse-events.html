@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Mouse Events</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .id {
+        padding: 10px;
+        border: 10px solid black;
+        background: rgb(255, 202, 202);
+    }
+</style>
+
+<body>
+    <h1>jQuery Mouse Events</h1>
+
+    <div class="id" id="box">
+        <h2>Color Change</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, tenetur.</p>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#box').click(function () {
+                $('#box').css('background', 'green');
+            });
+            $('#box').dblclick(function () {
+                $('#box').css('background', 'yellow');
+            });
+            $('#box').contextmenu(function () {
+                $('#box').css('background', 'grey');
+            });
+            $('#box').mouseenter(function () {
+                $('#box').css('background', 'black');
+            });
+            $('#box').mouseleave(function () {
+                $('#box').css('background', 'rgb(255, 202, 202)');
+            });
+        });
+    </script>
+</body>
+
+</html>

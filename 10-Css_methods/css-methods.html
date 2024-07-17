@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS METHODS</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #box {
+        height: 200px;
+        width: 300px;
+        padding: 20px;
+        margin: 15px;
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+    <h1>CSS METHODS</h1>
+    <div id="box">
+        <h2>TEST</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae repellendus in porro, dolore rem esse
+            amet doloremque dolor quidem ut!zz</p>
+    </div>
+    <button id="StyleBtn">Add Style</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#StyleBtn').click(function () {
+                $('#box').css({ 'background': '#222', 'color': '#fff', 'border': '10px dotted red' })
+            });
+        });
+    </script>
+</body>
+
+</html>

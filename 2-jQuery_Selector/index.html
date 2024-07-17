@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #box {
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+
+<body>
+
+    <H1>jQuery Selector</H1>
+
+    <div id="box" id="test">
+        <h2>Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eveniet recusandae culpa tenetur quam
+            cumque! Sint quam eligendi libero possimus aspernatur! Maiores facere unde neque exercitationem culpa,
+            possimus tempora voluptatem.</p>
+    </div>
+
+    <ul class="list">
+        <li id="test">KARACHI</li>
+        <li>LAHORE</li>
+        <li id="test">ISLAMABAD</li>
+        <li>MULTAN</li>
+        <li id="test">RAWALPANDI</li>
+    </ul>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.list').css('color', 'red')
+            $('.list').css('border', '2px solid #000')
+            $('.list li').css('border', '2px solid red')
+            $('#test*').css('border', '10px solid #333')
+            $('*').css('border', '10px solid #333')
+
+        });
+    </script>
+</body>
+
+</html>

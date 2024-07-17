@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON() & OFF() FUNCTIONS</title>
+</head>
+<Style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #box {
+        height: 250px;
+        width: 300px;
+        /* background: pink; */
+        border: 5px dotted black;
+    }
+
+    .BoxBg {
+        background-color: pink;
+    }
+</Style>
+
+<body>
+    <h1>On() & Off() Functions</h1>
+    <div id="box">
+        <h2>On() & Off Functions</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur eius enim mollitia vero unde nihil quis
+            in? Odit, repellat quidem.</p>
+    </div>
+    <button>Remove Events</button>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('#box').on("mouseover mouseout", function () {
+            //     $('#box').toggleClass('BoxBg');
+            // });
+
+            $('#box').on({
+                "click": function () {
+                    $(this).css({ 'background': 'black', 'border': '10px solid green' })
+
+                },
+                "mouseout": function () {
+                    $(this).css('background', 'green');
+
+                },
+                "mouseover": function () {
+                    $(this).css('background', 'orange');
+                }
+            });
+
+            $('button').click(function () {
+                $('#box').off('mouseout mouseover');
+            });
+        });
+    </script>
+</body>
+
+</html>

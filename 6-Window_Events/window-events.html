@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Window Events</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #box {
+        height: 300px;
+        width: 500px;
+        padding: 20px;
+        border: 10px solid #000;
+        overflow: auto;
+        background-color: aquamarine;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #box h2 {
+        text-align: center;
+        font-size: large;
+    }
+
+    p {
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h1>jQuery Window Events</h1>
+
+    <div id="box">
+        <H2>jquery</H2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam vero aspernatur nisi ullam fugit officia
+            quia repellendus blanditiis harum quas sit eaque ut maxime inventore laborum libero reiciendis odio omnis
+            temporibus error, est odit laudantium. Minus magni ipsam nihil assumenda expedita quidem! Quos doloremque
+            nesciunt ex neque non voluptatibus reprehenderit. Consectetur illo illum laborum incidunt explicabo iste
+            aliquam ex? Expedita dolorem ducimus, maiores debitis deserunt harum eius quo autem laboriosam doloribus
+            cupiditate neque assumenda sapiente at, ea fuga vitae in error modi nobis! Voluptatibus, facere atque
+            delectus quibusdam beatae necessitatibus aspernatur! Id quam vero maiores optio quas. Quo, blanditiis
+            facilis!</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro itaque autem laboriosam. Accusamus dolore delectus
+        repellendus! Harum aliquid ea doloribus sit, quod delectus, impedit aspernatur tempora laudantium, consequatur
+        reiciendis iusto reprehenderit consectetur! Nisi sunt a recusandae aliquid, laborum reprehenderit quis debitis
+        consectetur qui voluptas dolore porro et animi! Neque hic doloribus eveniet voluptate! Praesentium corrupti
+        recusandae commodi hic libero in nulla perferendis, sapiente voluptatum delectus id velit magnam ipsam, officia
+        at? Alias sed hic eius magnam itaque. Distinctio dolor, expedita incidunt blanditiis excepturi autem a rerum
+        deserunt, suscipit commodi quaerat. Quam rerum, nulla soluta reiciendis qui provident laborum voluptatibus
+        omnis, quae totam quasi reprehenderit voluptate rem sequi velit odit! Aspernatur voluptas nostrum ea voluptatem
+        tenetur sed omnis, accusamus sint similique veritatis officiis hic nulla reiciendis atque quibusdam. Minus
+        maiores ad culpa animi pariatur consectetur sit cumque veritatis quaerat voluptas dolor error accusamus optio,
+        quasi fugit! Earum eligendi numquam deserunt, molestiae id ad, enim iure ipsum quisquam maiores quibusdam
+        ratione ea harum vero natus sed incidunt repudiandae dolorem obcaecati facere exercitationem. Rerum maiores ad
+        quam animi dolore minus non repellendus quod doloribus omnis eos soluta, eaque dolor quia totam, voluptates,
+        saepe incidunt sit eum autem vero tenetur ipsa. Aliquam, quod nihil.</p>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                alert("You'r Scrolling");
+            });
+            $('#box').scroll(function () {
+                console.log("You'r Scrolling");
+            });
+
+            $(window).resize(function () {
+                console.log("You'r Resize Your screen!");
+            });
+
+            /*
+            THIS FUNCTION ARE REMOVE FORM jQuery
+            // $(window).load(function () {
+            //     console.log("You'r Resize Your screen!");
+            // });
+            // $(window).unload(function () {
+            //     console.log("You'r Resize Your screen!");
+            // });
+            */
+        });
+    </script>
+</body>
+
+</html>
